@@ -4,16 +4,17 @@ body {
     background-color: antiquewhite;
 }
 
-*{
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
-nav{
+nav {
     font-family: 'Ubuntu', sans-serif;
 }
 
-nav ul{
+nav ul {
     display: flex;
     align-items: center;
     list-style-type: none;
@@ -22,13 +23,13 @@ nav ul{
     color: white;
 }
 
-nav ul li{
-    padding: 0 12px
+nav ul li {
+    padding: 0 12px;
 }
 
 .brand img {
     width: 44px;
-    padding: 0 8px;  
+    padding: 0 8px;
 }
 
 .brand {
@@ -36,4 +37,120 @@ nav ul li{
     align-items: center;
     font-weight: bold;
     font-size: 1.3rem;
+}
+
+.container {
+    min-height: 72vh;
+    background-color: black;
+    color: white;
+    font-family: 'Varela Round', sans-serif;
+    display: flex;
+    flex-direction: column;
+    margin: 23px auto;
+    width: 70%;
+    border-radius: 12px;
+    padding: 34px;
+    background-image: url('background.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.bottom {
+    position: sticky;
+    height: 130px;
+    background-color: black;
+    color: white;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.icons {
+    margin-top: 14px;
+}
+
+.icons i {
+    cursor: pointer;
+}
+
+/* Progress Bar Styles */
+#myProgressBar {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 80vw;
+    height: 6px;
+    border-radius: 3px;
+    background: #444; /* fallback for browsers where JS isn't applied */
+    outline: none;
+    transition: background 0.3s ease-in-out;
+}
+
+#myProgressBar::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: white;
+    cursor: pointer;
+    border: none;
+    margin-top: -5px; /* aligns thumb with track */
+}
+
+#myProgressBar::-moz-range-thumb {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: white;
+    cursor: pointer;
+    border: none;
+}
+
+#myProgressBar::-moz-range-track {
+    background: #444;
+    height: 6px;
+    border-radius: 3px;
+}
+
+.songItemContainer {
+    margin-top: 74px;
+}
+
+.songItem {
+    height: 50px;
+    display: flex;
+    background-color: white;
+    width: 30%;
+    color: black;
+    margin: 12px 0;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 34px;
+}
+
+.songItem img {
+    width: 43px;
+    margin: 0 23px;
+    border-radius: 34px;
+}
+
+.timestamp {
+    margin: 0 23px;
+}
+
+.timestamp i {
+    cursor: pointer;
+}
+
+.songInfo {
+    position: absolute;
+    left: 10vw;
+    font-family: 'Varela Round', sans-serif;
+}
+
+.songInfo img {
+    opacity: 0;
+    transition: opacity 0.4s ease-in;
 }
